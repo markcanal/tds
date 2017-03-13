@@ -31,4 +31,11 @@ class SupplierController extends Controller
 
     	return view('supplier.supplier')->with('supl',$supl);
     }
+
+    public function add(Request $request){
+    	return view('');
+    }
+    public function edit(Request $request){
+
+    }
 }
