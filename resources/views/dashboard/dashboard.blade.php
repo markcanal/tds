@@ -38,113 +38,17 @@
 		                			</tr>
 		                		</thead>
 		                			<tbody>
+		                			@foreach($sup as $sups)
 		                				<tr>
-		                				<th>01235Ph</th>
-		                				<th>pako </th>
-		                				<th>Mahaba</th>
+		                				<th>{{$sups->p_id}}</th>
+		                				<th>{{$sups->p_name}} </th>
+		                				<th>{{$sups->p_description}}</th>
 		                				<th>200</th>
-		                				<th>Dante</th>
+		                				<th>{{$sups->sname}}</th>
 		                				</tr>
+		                			@endforeach
 
-		                				<tr>
-		                				<th>01235Ph</th>
-		                				<th>martilyo </th>
-		                				<th>maiksi</th>
-		                				<th>100</th>
-		                				<th>Dante</th>
-		                				</tr>
-
-		                				<tr>
-		                				<th>01235Ph</th>
-		                				<th>Turnilyo </th>
-		                				<th>Katamtaman</th>
-		                				<th>200</th>
-		                				<th>Dante</th>
-		                				</tr>
-
-		                				<tr>
-		                				<th>01235Ph</th>
-		                				<th>Pako </th>
-		                				<th>Baluktot</th>
-		                				<th>200</th>
-		                				<th>Dante</th>
-		                				</tr>
-
-		                				<tr>
-		                				<th>01235Ph</th>
-		                				<th>Ulo </th>
-		                				<th>Sira</th>
-		                				<th>32</th>
-		                				<th>Dante</th>
-		                				</tr>
-
-		                				<tr>
-		                				<th>01235Ph</th>
-		                				<th>Ulo </th>
-		                				<th>Sira</th>
-		                				<th>32</th>
-		                				<th>Dante</th>
-		                				</tr>
-
-		                				<tr>
-		                				<th>01235Ph</th>
-		                				<th>Ulo </th>
-		                				<th>Sira</th>
-		                				<th>32</th>
-		                				<th>Dante</th>
-		                				</tr>
-
-		                				<tr>
-		                				<th>01235Ph</th>
-		                				<th>Ulo </th>
-		                				<th>Sira</th>
-		                				<th>32</th>
-		                				<th>Dante</th>
-		                				</tr>
-
-		                				<tr>
-		                				<th>01235Ph</th>
-		                				<th>Ulo </th>
-		                				<th>Sira</th>
-		                				<th>32</th>
-		                				<th>Dante</th>
-		                				</tr>
-
-		                				<tr>
-		                				<th>01235Ph</th>
-		                				<th>Ulo </th>
-		                				<th>Sira</th>
-		                				<th>32</th>
-		                				<th>Dante</th>
-		                				</tr>
-		                				<tr>
-		                				<th>01235Ph</th>
-		                				<th>Ulo </th>
-		                				<th>Sira</th>
-		                				<th>32</th>
-		                				<th>Dante</th>
-		                				</tr>
-		                				<tr>
-		                				<th>01235Ph</th>
-		                				<th>Ulo </th>
-		                				<th>Sira</th>
-		                				<th>32</th>
-		                				<th>Dante</th>
-		                				</tr>
-		                				<tr>
-		                				<th>01235Ph</th>
-		                				<th>Ulo </th>
-		                				<th>Sira</th>
-		                				<th>32</th>
-		                				<th>Dante</th>
-		                				</tr>
-		                				<tr>
-		                				<th>01235Ph</th>
-		                				<th>Ulo </th>
-		                				<th>Sira</th>
-		                				<th>32</th>
-		                				<th>Dante</th>
-		                				</tr>
+		                				
 		                			</tbody>
 		                				<tfoot>
 		                					

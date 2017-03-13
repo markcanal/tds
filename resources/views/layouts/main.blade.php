@@ -69,7 +69,7 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="{{route('logout')}}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                    
@@ -102,10 +102,10 @@
                         		<a href="#"><i class="fa fa-wrench fa-fw"></i> Stocks<span class="fa arrow"></span></a>
                           		 <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/dispatch">On Stocks</a>
+                                    <a href="/">On Stocks</a>
                                 </li>
                                 <li>
-                                    <a href="#">Out of Stocks</a>
+                                    <a href="/">Out of Stocks</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
