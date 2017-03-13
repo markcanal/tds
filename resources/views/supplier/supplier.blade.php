@@ -26,8 +26,8 @@
 		                	<span class="fa fa-share-alt fa-fw"></span> Supplier Table
 		                	</div>
 		                	<div class="table-responsive">
-		                	<div class="panel-body">
-		                	<table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+		                	<div class="panel-body " >
+		                	<table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example" style="font-size: 12px;font-family: verdana;">
 		                		<thead>
 		                			<tr>
 		                				<th><span class="fa fa-user fa-fw"></span>Supplier Name</th>
@@ -44,8 +44,8 @@
 		                					<th>{{$suplier->contact}}</th>
 		                					<th>{{$suplier->person}}</th>
 		                					<th>{{$suplier->saddress}}</th>
-		                					<th><button class="btn btn-primary btn-xs">Add</button>
-		                					<button class="btn btn-primary btn-xs">Edit</button>
+		                					<th><button class="btn btn-info btn-xs">  Add  </button>
+		                					<button class="btn btn-warning btn-xs">Edit</button></th>
 		                					</th>
 		                				</tr>
 		                			@endforeach		                				
