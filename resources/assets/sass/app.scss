@@ -1,0 +1,24 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.back-to-top { 
+background: none;
+margin: 0;
+position: fixed;
+bottom: 0;
+right: 0;
+width: 40px;
+height: 70px;
+z-index: 100;
+display: none;
+text-decoration: none;
+color: #ffffff;
+}
+ 
+  
+ 
+.back-to-top i {
+  font-size: 20px;
+}
+
+.web-footer  {width:100%;color:white; text-align:right;padding:20px 40px 20px 400px; background:#333; height:100px;}
+
