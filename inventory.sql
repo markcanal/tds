@@ -113,13 +113,14 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `level` int(10) DEFAULT NULL,
+  `image` blob,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `users` */
 
-insert  into `users`(`id`,`user_name`,`email`,`password`,`remember_token`,`created_at`,`updated_at`,`level`) values (1,'admin1234','admin1234@gmail.com','$2y$10$OgpR4RHBjJdDBagmr.zJrua7pwiytTuwVEmRX3dOYjQk94C8ygskK','yole2Cg9N91Lw91sivKuorx8LszlvtMPLpwUn07w16FUqrgQtU2yY8RiEf5F','2017-03-11 06:04:03','2017-03-13 05:46:30',NULL),(2,'admin12345','admin12345@gmail.com','$2y$10$HNWo1dlbhwrETiFOqvV8WuAH0VnN5ZSt726N77KbdncOUb/wfjmx2',NULL,'2017-03-11 06:13:28','2017-03-11 06:13:28',NULL),(3,'user12345','user12345@gmail.com','$2y$10$iWNZ4D6S9TxozZDHlHZR9e4nWStSvuxu/AvCxJN8GHlG7Q8.GhrsC','Zp4EqAq1Rggf2W5mARuhy3VdBvhjpW73rKSxo7LFCY7tmEGwtpTxZCFHNxiQ','2017-03-13 05:48:36','2017-03-13 05:54:04',NULL);
+insert  into `users`(`id`,`user_name`,`email`,`password`,`remember_token`,`created_at`,`updated_at`,`level`,`image`) values (1,'admin1234','admin1234@gmail.com','$2y$10$OgpR4RHBjJdDBagmr.zJrua7pwiytTuwVEmRX3dOYjQk94C8ygskK','yole2Cg9N91Lw91sivKuorx8LszlvtMPLpwUn07w16FUqrgQtU2yY8RiEf5F','2017-03-11 06:04:03','2017-03-13 05:46:30',NULL,NULL),(2,'admin12345','admin12345@gmail.com','$2y$10$HNWo1dlbhwrETiFOqvV8WuAH0VnN5ZSt726N77KbdncOUb/wfjmx2',NULL,'2017-03-11 06:13:28','2017-03-11 06:13:28',NULL,NULL),(3,'user12345','user12345@gmail.com','$2y$10$iWNZ4D6S9TxozZDHlHZR9e4nWStSvuxu/AvCxJN8GHlG7Q8.GhrsC','Zp4EqAq1Rggf2W5mARuhy3VdBvhjpW73rKSxo7LFCY7tmEGwtpTxZCFHNxiQ','2017-03-13 05:48:36','2017-03-13 05:54:04',NULL,NULL);
 
 /*Table structure for table `vtype` */
 
