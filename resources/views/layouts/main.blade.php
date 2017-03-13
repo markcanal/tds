@@ -72,7 +72,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{route('index')}}"><i class="fa fa-taxi"></i> TDS Inventory System ©</a>
+                <a class="navbar-brand" href="{{route('index')}}"><i class="fa fa-taxi fa-fw"></i> Autoparts Inventory System©</a>
             </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">

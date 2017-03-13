@@ -1,6 +1,6 @@
 /*
-SQLyog Ultimate v10.00 Beta1
-MySQL - 5.6.17 : Database - tds_inventory
+SQLyog Enterprise - MySQL GUI v8.18 
+MySQL - 5.7.14 : Database - tds_inventory
 *********************************************************************
 */
 
@@ -32,6 +32,36 @@ CREATE TABLE `app_log` (
 
 /*Data for the table `app_log` */
 
+/*Table structure for table `item_category` */
+
+DROP TABLE IF EXISTS `item_category`;
+
+CREATE TABLE `item_category` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `item_cat` varchar(255) DEFAULT NULL,
+  `item_cat_no` int(2) DEFAULT NULL,
+  UNIQUE KEY `id` (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+
+/*Data for the table `item_category` */
+
+insert  into `item_category`(`id`,`item_cat`,`item_cat_no`) values (1,'Vios/Batman',0),(2,'Superman',0),(3,'Batman',0),(4,'Mirage',0),(5,'Body And Main Parts',1),(6,'Doors',2),(7,'Windows',3),(8,'Electrical and Electronics',4),(9,'Electrical Supply',5),(10,'Guages and Meters',6),(11,'Ignition Electronic',7),(12,'Lighting and Signaling',8),(13,'Sensors',9),(14,'Starting System',10),(15,'Electrical Switches',11),(16,'Wiring Harness',12),(17,'Miscellaneous',13);
+
+/*Table structure for table `item_directory` */
+
+DROP TABLE IF EXISTS `item_directory`;
+
+CREATE TABLE `item_directory` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `item_part_number` int(11) DEFAULT NULL,
+  `item_name` varchar(255) DEFAULT NULL,
+  `item_specs` varchar(255) DEFAULT NULL,
+  `item_cat` int(11) DEFAULT NULL,
+  UNIQUE KEY `id` (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+/*Data for the table `item_directory` */
+
 /*Table structure for table `migrations` */
 
 DROP TABLE IF EXISTS `migrations`;
@@ -59,6 +89,29 @@ CREATE TABLE `password_resets` (
 
 /*Data for the table `password_resets` */
 
+/*Table structure for table `pmaster` */
+
+DROP TABLE IF EXISTS `pmaster`;
+
+CREATE TABLE `pmaster` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pcode` varchar(255) DEFAULT NULL,
+  `pname` varchar(255) DEFAULT NULL,
+  `pdisc` varchar(255) DEFAULT NULL,
+  `prequest_date` datetime DEFAULT NULL,
+  `prequest_for` varchar(255) DEFAULT NULL,
+  `prequest_received` datetime DEFAULT NULL,
+  `prequest_received_by` varchar(255) DEFAULT NULL,
+  `prequest_released` datetime DEFAULT NULL,
+  `prequest_rel_by` varchar(255) DEFAULT NULL,
+  `prequest_rec_by` varchar(255) DEFAULT NULL,
+  `job_order_no` varchar(255) DEFAULT NULL,
+  `job_order_unit` varchar(255) DEFAULT NULL,
+  UNIQUE KEY `id` (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+/*Data for the table `pmaster` */
+
 /*Table structure for table `product` */
 
 DROP TABLE IF EXISTS `product`;
@@ -77,6 +130,26 @@ CREATE TABLE `product` (
 /*Data for the table `product` */
 
 insert  into `product`(`id`,`p_id`,`p_description`,`p_name`,`p_for_vtype`,`p_stocks`,`sup_id`) values (1,'322134165','Gold','Tire',NULL,20,1),(2,'325HKGP','Boom','Beam',NULL,0,2);
+
+/*Table structure for table `stocks` */
+
+DROP TABLE IF EXISTS `stocks`;
+
+CREATE TABLE `stocks` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `quantity` int(11) DEFAULT NULL,
+  `pcode` int(11) DEFAULT NULL,
+  `pname` varchar(255) DEFAULT NULL,
+  `received_date` datetime DEFAULT NULL,
+  `received_by` varchar(255) DEFAULT NULL,
+  `psupplier` varchar(255) DEFAULT NULL,
+  `total_price` decimal(8,2) DEFAULT NULL,
+  `po_number` varchar(255) DEFAULT NULL,
+  `unit_price` decimal(8,2) DEFAULT NULL,
+  UNIQUE KEY `id` (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+/*Data for the table `stocks` */
 
 /*Table structure for table `supplier_table` */
 
@@ -121,20 +194,6 @@ CREATE TABLE `users` (
 /*Data for the table `users` */
 
 insert  into `users`(`id`,`user_name`,`email`,`password`,`remember_token`,`created_at`,`updated_at`,`level`,`image`) values (1,'admin1234','admin1234@gmail.com','$2y$10$OgpR4RHBjJdDBagmr.zJrua7pwiytTuwVEmRX3dOYjQk94C8ygskK','yole2Cg9N91Lw91sivKuorx8LszlvtMPLpwUn07w16FUqrgQtU2yY8RiEf5F','2017-03-11 06:04:03','2017-03-13 05:46:30',NULL,NULL),(2,'admin12345','admin12345@gmail.com','$2y$10$HNWo1dlbhwrETiFOqvV8WuAH0VnN5ZSt726N77KbdncOUb/wfjmx2',NULL,'2017-03-11 06:13:28','2017-03-11 06:13:28',NULL,NULL),(3,'user12345','user12345@gmail.com','$2y$10$iWNZ4D6S9TxozZDHlHZR9e4nWStSvuxu/AvCxJN8GHlG7Q8.GhrsC','Zp4EqAq1Rggf2W5mARuhy3VdBvhjpW73rKSxo7LFCY7tmEGwtpTxZCFHNxiQ','2017-03-13 05:48:36','2017-03-13 05:54:04',NULL,NULL);
-
-/*Table structure for table `vtype` */
-
-DROP TABLE IF EXISTS `vtype`;
-
-CREATE TABLE `vtype` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `p_id` int(11) DEFAULT NULL,
-  `type` varchar(255) DEFAULT NULL,
-  `p_code` varchar(255) DEFAULT NULL,
-  KEY `id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-/*Data for the table `vtype` */
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
