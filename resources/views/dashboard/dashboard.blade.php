@@ -10,7 +10,7 @@
                         <ol class="breadcrumb">
                             <li >
                                 <i class="fa fa-home"></i> 
-                                <a href="" >Home</a>
+                                <a href="{{route('index')}}" >Home</a>
                             </li>
                             <li class="active">
                             <i class="fa fa-dashboard"></i> 
@@ -25,39 +25,36 @@
 		                	<div class="panel-heading">
 		                	List of Stocks
 		                	</div>
-		                	<div class="panel-body">
-		                	<table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
-		                		<thead>
-		                			<tr>
-		                				<th>Part Number</th>
-		                				<th>Part Name</th>
-		                				<th>Type</th>
-		                				<th>On Stocks</th>
-		                				<th>Supplier</th>
-		                				
-		                			</tr>
-		                		</thead>
-		                			<tbody>
-		                			@foreach($sup as $sups)
-		                				<tr>
-		                				<th>{{$sups->p_id}}</th>
-		                				<th>{{$sups->p_name}} </th>
-		                				<th>{{$sups->p_description}}</th>
-		                				<th>200</th>
-		                				<th>{{$sups->sname}}</th>
-		                				</tr>
-		                			@endforeach
+		                	<div class="table-responsive">
+		                		<div class="panel-body">
+				                	<table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+				                		<thead>
+				                			<tr>
+				                				<th>Part Number</th>
+				                				<th>Part Name</th>
+				                				<th>Type</th>
+				                				<th>On Stocks</th>
+				                				<th>Supplier</th>
+				                				
+				                			</tr>
+				                		</thead>
+				                			<tbody>
+				                			@foreach($sup as $sups)
+				                				<tr>
+				                				<th>{{$sups->p_id}}</th>
+				                				<th>{{$sups->p_name}} </th>
+				                				<th>{{$sups->p_description}}</th>
+				                				<th>200</th>
+				                				<th>{{$sups->sname}}</th>
+				                				</tr>
+				                			@endforeach
 
-		                				
-		                			</tbody>
-		                				<tfoot>
-		                					
-		                				</tfoot>
-		                			
-		                		
-		                	</table>
+				                				
+				                			</tbody>
+				                	</table>
+			                	</div>
+		                		<div class="panel-footer" style="text-align: center"></div>
 		                	</div>
-		                	<div class="panel-footer" style="text-align: center"></div>
 		                </div>
 		            </div>
                 </div>

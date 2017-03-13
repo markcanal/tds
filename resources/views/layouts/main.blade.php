@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-	<title>The Study Of Web Application with Bootstrap</title>
+	<title>Inventory</title>
 
 
 	 <!-- Bootstrap Core CSS -->
@@ -54,7 +54,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><i class="fa fa-taxi"></i> TDS Inventory System ©</a>
+                <a class="navbar-brand" href="{{route('index')}}"><i class="fa fa-taxi"></i> TDS Inventory System ©</a>
             </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
@@ -96,7 +96,7 @@
                         	<!-- /input-group -->
 
                         	<li>
-                            <a href=""><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="{{route('index')}}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         	</li>
                         <li>
                         		<a href="#"><i class="fa fa-wrench fa-fw"></i> Stocks<span class="fa arrow"></span></a>
@@ -116,7 +116,7 @@
                         	<a href="#"><i class="fa fa-gear fa-fw"></i> Maintenance<span class="fa arrow"></span></a>
                           		 <ul class="nav nav-second-level">
                                 	<li>
-                                    	<a href="#">Supplier</a>
+                                    	<a href="{{route('supplier')}}">Supplier</a>
                                	 	</li>
                                 	<li>
                                     	<a href="#">Parts</a>

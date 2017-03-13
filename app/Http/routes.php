@@ -20,6 +20,7 @@ Route::post('/register_save',	['as'=>'reg_user_save',	'uses' => 'AuthController@
 Route::post('/login',			['as'=>'login',			'uses' => 'AuthController@login']);
 Route::get('/dashboard',		['as'=>'dashboard',		'uses' => 'UserController@home']);
 Route::get('/logout',			['as'=>'logout',		'uses' => 'UserController@logout']);
+Route::get('/supplier',			['as'=>'supplier',		'uses' => 'SupplierController@index']);
 
 
 });

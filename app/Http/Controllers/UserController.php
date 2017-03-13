@@ -13,14 +13,15 @@ use App\Logging;
 class UserController extends Controller
 {
     public function home(){
-
+    	if(!Auth::check()){
+    		return redirect()->route('index');
+    	}
     	$username = Auth::user()->name;
 
     	//data
 
     	$d_data="select p_id,p_description,p_name,b.sname from product  a
     			left join supplier_table b on a.sup_id = b.id";
-
     		$sup =	DB::select(DB::raw($d_data));
 
     	return view('dashboard.dashboard')->with('sup',$sup);
