@@ -72,7 +72,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{route('index')}}"><i class="fa fa-cog fa-spin fa-3x fa-fw" style="font-size: 20px"></style></i> Autoparts Inventory System©</a>
+                <a class="navbar-brand" href="{{route('index')}}"><i class="fa fa-cog fa-spin fa-3x fa-fw" style="font-size: 20px"></style></i> Autoparts Inventory©</a>
             </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
@@ -137,8 +137,11 @@
                                     	<a href="{{route('supplier')}}">Supplier</a>
                                	 	</li>
                                 	<li>
-                                    	<a href="#">Parts</a>
+                                    	<a href="{{route('material')}}">Materials</a>
                                 	</li>
+                                    <li>
+                                        <a href="{{route('mechanic')}}">Departments</a>
+                                    </li>
                                 	
                                 	<li>
                                 		<a href="#">Reports<span class="fa arrow"></span></a>
@@ -174,7 +177,7 @@
                
                 <a href="" class="back-to-top" style="display: inline;"">
  
-                <i class="fa fa-chevron-up"></i>
+                <i class="fa fa-angle-double-up"></i>
  
                 </a>
     	       

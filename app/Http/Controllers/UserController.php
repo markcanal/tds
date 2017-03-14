@@ -31,4 +31,7 @@ class UserController extends Controller
     	Session::flush();
     	return redirect()->route('index');
     }
+    public function department(){
+        return view ('mechanics.file');
+    }
 }

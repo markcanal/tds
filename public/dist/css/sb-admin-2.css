@@ -169,6 +169,9 @@ body {
 .login-panel {
   margin-top: 25%;
 }
+.reg-panel{
+  margin-top: 15%;
+}
 .flot-chart {
   display: block;
   height: 400px;
@@ -244,7 +247,7 @@ table.dataTable thead .sorting:after {
   border-color: #5cb85c;
   color: white;
   background-color: #5cb85c;
-}
+} 
 .panel-green > a {
   color: #5cb85c;
 }

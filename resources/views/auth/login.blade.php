@@ -6,8 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="{{URL::asset('vendor/css/bootstrap.min.css')}}">
    		 <!-- Custom Fonts -->
-    	<link href="{{URL::asset('vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
-
+    	<link href="{{URL::asset('vendor/font-awesome-new/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{URL::asset('dist/css/sb-admin-2.css')}}" rel="stylesheet">
 	<title>Login</title>
 </head>
 <body style="background:url('{{URL::asset('img/bg.jpg')}}')no-repeat center center fixed;
@@ -16,10 +16,10 @@
   -o-background-size: cover;
   	background-size: cover;">
 
-		<div class="wrapper" style="padding: 150px;">
+		<div class="login-panel"><!--style="padding: 150px;-->
 			<div class="col-md-4 col-md-offset-4">
 
-					<div class="panel panel-success" >
+					<div class="panel panel-green" >
 							<div class="panel-heading">
 								<h1 style="font-size: 20px;"><span class="fa fa-lock fa-fw"></span>Log in</h1>
 							</div>
@@ -32,7 +32,7 @@
 								<form action="{{route('login')}}" method="POST">
 									<div class="form-group {{$errors->has('username') ? 'has-error' : ''}}">
 									<div class="input-group margin-bottom-sm">
-										<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i></span>
+										<span class="input-group-addon"><i class="fa fa-user-circle-o fa-fw" aria-hidden="true"></i></span>
   										<input class="form-control" name="username" type="text" placeholder="User Name">
 									</div>
 									<!--<label>User Name</label><-->
@@ -53,7 +53,8 @@
 									@endif
 									</div><div style="font-size: 10px;">&nbsp</div>
 									{{csrf_field()}}
-									<button type="submit" class="btn btn-primary">Login</button>
+									<button type="submit" class="btn btn-primary">
+									Login</button>
 									<a href="{{route('reg_user')}}" style="color: gray">&nbsp&nbsp Register</a>
 								</form>
 							</div>

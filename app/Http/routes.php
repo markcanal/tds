@@ -21,6 +21,7 @@ Route::post('/login',			['as'=>'login',			'uses' => 'AuthController@login']);
 Route::get('/dashboard',		['as'=>'dashboard',		'uses' => 'UserController@home']);
 Route::get('/logout',			['as'=>'logout',		'uses' => 'UserController@logout']);
 Route::get('/supplier',			['as'=>'supplier',		'uses' => 'SupplierController@index']);
+Route::get('/mechanics',		['as'=>'mechanic',		'uses' => 'UserController@department']);
 
-
+Route::get('/materials',		['as'=>'material',		'uses' => 'MaterialController@index']);
 });
