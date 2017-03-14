@@ -23,11 +23,49 @@
                 	<div class="col-lg-12">
 		                <div class="panel panel-green">
 		                	<div class="panel-heading">
-		                	List of Stocks
+		                	<span class="fa fa-check-square-o fa-fw"></span>List of Stocks
 		                	</div>
 		                	<div class="table-responsive">
 		                		<div class="panel-body">
 				                	<table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+				                		<thead>
+				                			<tr>
+				                				<th>Part Number</th>
+				                				<th>Part Name</th>
+				                				<th>Type</th>
+				                				<th>On Stocks</th>
+				                				<th>Supplier</th>
+				                				
+				                			</tr>
+				                		</thead>
+				                			<tbody>
+				                			@foreach($sup as $sups)
+				                				<tr>
+				                				<th>{{$sups->p_id}}</th>
+				                				<th>{{$sups->p_name}} </th>
+				                				<th>{{$sups->p_description}}</th>
+				                				<th>200</th>
+				                				<th>{{$sups->sname}}</th>
+				                				</tr>
+				                			@endforeach
+
+				                				
+				                			</tbody>
+				                	</table>
+			                	</div>
+		                		<div class="panel-footer" style="text-align: center"></div>
+		                	</div>
+		                </div>
+		            </div>
+
+		            <div class="col-lg-12">
+		                <div class="panel panel-red">
+		                	<div class="panel-heading">
+		                	<span class="fa fa-minus-square fa-fw"></span>List of Out of Stocks
+		                	</div>
+		                	<div class="table-responsive">
+		                		<div class="panel-body">
+				                	<table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example1">
 				                		<thead>
 				                			<tr>
 				                				<th>Part Number</th>
@@ -64,6 +102,9 @@
 <script>
     $(document).ready(function() {
         $('#dataTables-example').DataTable({
+            responsive: true
+        });
+        $('#dataTables-example1').DataTable({
             responsive: true
         });
     });

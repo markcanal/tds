@@ -41,7 +41,7 @@
     <link href="{{URL::asset('vendor/morrisjs/morris.css')}}" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="{{URL::asset('vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{URL::asset('vendor/font-awesome-new/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" type="text/css" href="{{URL::asset('css/app.css')}}">
     <!-- DataTables CSS -->
@@ -61,7 +61,7 @@
     @yield('jquery')
 </head>
 
-<body>
+<body >
 <div id="wrapper">
 	<!-- Navigation -->
 		<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
@@ -72,7 +72,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{route('index')}}"><i class="fa fa-taxi fa-fw"></i> Autoparts Inventory System©</a>
+                <a class="navbar-brand" href="{{route('index')}}"><i class="fa fa-cog fa-spin fa-3x fa-fw" style="font-size: 20px"></style></i> Autoparts Inventory System©</a>
             </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
