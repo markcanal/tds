@@ -54,31 +54,33 @@
                         </div>
 
                         <div class="panel-body">
-                            <table width="100%" class="table  table-responsive table-bordered table-striped table-hover table-condensed" id="mechan">
-                               
-                                <thead>
-                                    <tr>
-                                        <th> sample</th>
-                                        <th> sample</th>
-                                        <th> sample</th>
-                                        <th> sample</th>
-                                        <th> sample</th>
-                                        <th> sample</th>
-                                    </tr>
-                                </thead>
-                                
-                                <tbody>
-                                   <tr>
-                                       <td>&nbsp</td>
-                                       <td>&nbsp</td>
-                                       <td>&nbsp</td>
-                                       <td>&nbsp</td>
-                                       <td>&nbsp</td>
-                                       <td>&nbsp</td>
-                                   </tr>
-                                </tbody>
-                                                        
-                            </table>
+                            <div class="table-responsive">
+                                    <table width="100%" class="table  table-bordered table-striped table-hover table-condensed" id="mechan">
+                                       
+                                        <thead>
+                                            <tr>
+                                                <th> sample</th>
+                                                <th> sample</th>
+                                                <th> sample</th>
+                                                <th> sample</th>
+                                                <th> sample</th>
+                                                <th> sample</th>
+                                            </tr>
+                                        </thead>
+                                        
+                                        <tbody>
+                                           <tr>
+                                               <td>&nbsp</td>
+                                               <td>&nbsp</td>
+                                               <td>&nbsp</td>
+                                               <td>&nbsp</td>
+                                               <td>&nbsp</td>
+                                               <td>&nbsp</td>
+                                           </tr>
+                                        </tbody>
+                                                                
+                                    </table>
+                            </div>
                         </div>
                         
                         <div class="panel-footer" style="text-align: right;font-size: 10px">
@@ -89,4 +91,5 @@
                 </div>
 @stop
 @section('scripting')
+
 @stop

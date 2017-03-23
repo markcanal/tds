@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Logging extends Model
 {
-    protected $primaryKey ='';
+    protected $primaryKey ='user_id';
     protected $table='app_log';
 
     public static function  log($id ,$module,$activity){

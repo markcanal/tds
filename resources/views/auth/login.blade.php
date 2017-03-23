@@ -23,7 +23,7 @@
 							<div class="panel-heading">
 								<h1 style="font-size: 20px;"><span class="fa fa-lock fa-fw"></span>Log in</h1>
 							</div>
-							<div class="panel-body"><div style="font-size: 10px;">&nbsp</div>
+							<div class="panel-body"><div style="font-size: 10px;">&nbsp;</div>
 							@if (Session::has('info'))
 									<div class="alert alert-warning">
 										{{Session::get('info')}}
@@ -51,11 +51,11 @@
 									@if($errors->has('password'))
 										<span class="help-block">{{$errors->first('password')}}</span>
 									@endif
-									</div><div style="font-size: 10px;">&nbsp</div>
+									</div><div style="font-size: 10px;">&nbsp;</div>
 									{{csrf_field()}}
 									<button type="submit" class="btn btn-primary">
 									Login</button>
-									<a href="{{route('reg_user')}}" style="color: gray">&nbsp&nbsp Register</a>
+									<a href="{{route('reg_user')}}" style="color: gray">&nbsp;&nbsp; Register</a>
 								</form>
 							</div>
 							<div class="panel-footer" style="text-align: right;"><span style="font-size: 8px;">Inventory System ViralKnowledge™</span></div>

@@ -5753,5 +5753,9 @@ button.close {
   padding: 20px 40px 20px 400px;
   background: #333;
   height: 100px; }
-
+@media print{
+  .web-footer{
+    text-align: center;
+  }
+}
 /*# sourceMappingURL=app.css.map */

@@ -25,42 +25,43 @@
 		                	<div class="panel-heading">
 		                	<span class="fa fa-share-alt fa-fw"></span> Supplier Table
 		                	</div>
-		                	<div class="table-responsive">
+		                	
 		                	<div class="panel-body " >
-		                	<table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example" style="font-size: 12px;">
-		                		<thead>
-		                			<tr>
-		                				<th><span class="fa fa-user fa-fw"></span>Supplier Name</th>
-		                				<th><span class="fa fa-mobile fa-fw"></span>Contact Information</th>
-		                				<th><span class="fa fa-user fa-fw"></span>Contact Person</th>
-		                				<th><span class="fa fa-building-o fa-fw"></span>Address</th>
-		                				<th><span class="fa fa-plus fa-fw"></span><span class="fa fa-edit fa-fw">Action</span></th>	
-		                			</tr>
-		                		</thead>
-		                			<tbody>
-		                			@foreach($supl as $suplier)
-		                				<tr>
-		                					<th>{{$suplier->Name}}</th>
-		                					<th>{{$suplier->contact}}</th>
-		                					<th>{{$suplier->person}}</th>
-		                					<th>{{$suplier->saddress}}</th>
-		                					<th><a href="#myModal" role="button" class="white btn btn-info btn-xs" id="btn-new" data-toggle="modal"><i class="fa fa-plus fa-fw" ></i> Add<!--<button class="btn btn-info btn-xs" onclick="new_request();">  Add  </button>--></a>
-		                					<a href="#myModal" role="button" class="white btn btn-warning btn-xs" id="btn-new" data-toggle="modal"><i class="fa fa-edit" ></i>  Edit <!--<button class="btn btn-info btn-xs" onclick="new_request();">  Add  </button>--></a>
-		                					<!--<button class="btn btn-warning btn-xs">Edit</button>--></th>
-		                					</th>
-		                				</tr>
-		                			@endforeach		                				
-		                			</tbody>
-		                				<tfoot>
-		                					
-		                				</tfoot>
-		                			
-		                		
-		                	</table>
+			                	<div class="table-responsive">
+				                	<table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example" style="font-size: 12px;">
+				                		<thead>
+				                			<tr>
+				                				<th><span class="fa fa-user fa-fw"></span>Supplier Name</th>
+				                				<th><span class="fa fa-mobile fa-fw"></span>Contact Information</th>
+				                				<th><span class="fa fa-user fa-fw"></span>Contact Person</th>
+				                				<th><span class="fa fa-building-o fa-fw"></span>Address</th>
+				                				<th><span class="fa fa-plus fa-fw"></span><span class="fa fa-edit fa-fw">Action</span></th>	
+				                			</tr>
+				                		</thead>
+				                			<tbody>
+				                			@foreach($supl as $suplier)
+				                				<tr>
+				                					<th>{{$suplier->Name}}</th>
+				                					<th>{{$suplier->contact}}</th>
+				                					<th>{{$suplier->person}}</th>
+				                					<th>{{$suplier->saddress}}</th>
+				                					<th><a href="#myModal" role="button" class="white btn btn-info btn-xs" id="btn-new" data-toggle="modal"><i class="fa fa-plus fa-fw" ></i> Add<!--<button class="btn btn-info btn-xs" onclick="new_request();">  Add  </button>--></a>
+				                					<a href="#myModal2" role="button" class="white btn btn-warning btn-xs" id="btn-new" data-toggle="modal"><i class="fa fa-edit" ></i>  Edit <!--<button class="btn btn-info btn-xs" onclick="new_request();">  Add  </button>--></a>
+				                					<!--<button class="btn btn-warning btn-xs">Edit</button>--></th>
+				                					</th>
+				                				</tr>
+				                			@endforeach		                				
+				                			</tbody>
+				                				<tfoot>
+				                					
+				                				</tfoot>
+				                			
+				                		
+				                	</table>
 
-		                	<div class="panel-footer" style="text-align: center"></div>
-		                	</div>
-		                </div>
+			                	<div class="panel-footer" style="text-align: center"></div>
+			                </div>
+			             </div>
 		            </div>
                 </div></div>
 
@@ -86,6 +87,28 @@
 		            </div>
 		        </div>
 		    </div>
+		</div>
+
+		<div id="myModal2" class="modal fade ">
+			<div class="modal-dialog">
+				<div class="row">
+					
+					    <div class="panel panel-primary">
+					    	<div class="panel-header">
+					    		<div class="row">
+					    		<i class="fa fa-arrow fa-fw"></i>
+					    		</div>
+					    	</div>
+					    	<div class="panel-body">
+					    		
+					    	</div>
+					    	<div class="panel-footer">
+					    		
+					    	</div>
+					    </div>
+				   
+			    </div>
+			</div>
 		</div>
 @stop
 @section('scripting')

@@ -36,13 +36,14 @@
 
     <!-- Custom CSS -->
     <link href="{{URL::asset('dist/css/sb-admin-2.css')}}" rel="stylesheet">
-    <link href="{{URL::asset('css/app.css')}}" rel="stylesheet">
+
     <!-- Morris Charts CSS -->
     <link href="{{URL::asset('vendor/morrisjs/morris.css')}}" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="{{URL::asset('vendor/font-awesome-new/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
 
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('css/app.css')}}">
     <!-- DataTables CSS -->
     <link href="{{URL::asset('vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet')}}">
     <!-- DataTables Responsive CSS -->
@@ -71,14 +72,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{route('index')}}"><i class="fa fa-cog fa-spin fa-3x fa-fw" style="font-size: 20px"></style></i> Autoparts Inventory©</a>
+                <a class="navbar-brand" href="{{route('index')}}"><i class="fa fa-cog fa-spin fa-3x fa-fw" style="font-size: 20px"></style></i> Autoparts Inventory System©</a>
             </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                    
                   
                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user-circle fa-fw"></i><small>Welcome!</small> {{Auth::user()->user_name}} <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
@@ -99,23 +100,34 @@
             <div class="navbar-default sidebar" role="navigation">
             	<div class="sidebar-nav navbar-collapse">
             		<ul class="nav" id="side-menu">
-            			
+            			<!--	<li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            
+                        	</li> -->
+                        	<!-- /input-group -->
+
                         	<li>
                             <a href="{{route('index')}}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         	</li>
-                        
-                            <li>
+                        <li>
                         		<a href="#"><i class="fa fa-wrench fa-fw"></i> Stocks<span class="fa arrow"></span></a>
                           		 <ul class="nav nav-second-level">
-                                        <li>
-                                            <a href="/">On Stocks</a>
-                                        </li>
-                                        <li>
-                                            <a href="/">Out of Stocks</a>
-                                        </li>
-                                 </ul>
+                                <li>
+                                    <a href="/">On Stocks</a>
+                                </li>
+                                <li>
+                                    <a href="/">Out of Stocks</a>
+                                </li>
+                            </ul>
                             <!-- /.nav-second-level -->
-                            </li>
+                        </li>
 
               
                         <li>
@@ -125,11 +137,8 @@
                                     	<a href="{{route('supplier')}}">Supplier</a>
                                	 	</li>
                                 	<li>
-                                    	<a href="{{route('material')}}">Materials</a>
+                                    	<a href="#">Parts</a>
                                 	</li>
-                                    <li>
-                                        <a href="{{route('mechanic')}}">Departments</a>
-                                    </li>
                                 	
                                 	<li>
                                 		<a href="#">Reports<span class="fa arrow"></span></a>
@@ -165,7 +174,7 @@
                
                 <a href="" class="back-to-top" style="display: inline;"">
  
-                <i class="fa fa-angle-double-up"></i>
+                <i class="fa fa-chevron-up"></i>
  
                 </a>
     	       
